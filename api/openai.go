@@ -30,7 +30,7 @@ func NewOpenAIClient() (*OpenAIClient, error) {
 	}
 	model := os.Getenv("OPENAI_MODEL")
 	if model == "" {
-		model = "gpt-5" // or gpt-5-mini
+		model = "gpt-5-mini"
 	}
 	return &OpenAIClient{
 		BaseURL: base,
@@ -44,12 +44,13 @@ type chatMessage struct {
 	Role    string `json:"role"`
 	Content string `json:"content"`
 }
+
 type chatReq struct {
-	Model          string        `json:"model"`
-	Messages       []chatMessage `json:"messages"`
-	Temperature    float64       `json:"temperature"`
-	ResponseFormat map[string]any`json:"response_format,omitempty"`
+	Model       string        `json:"model"`
+	Messages    []chatMessage `json:"messages"`
+	Temperature float64       `json:"temperature"`
 }
+
 type chatResp struct {
 	Choices []struct {
 		Message struct {
@@ -58,16 +59,25 @@ type chatResp struct {
 	} `json:"choices"`
 }
 
+// LLMClient interface
+type LLMClient interface {
+	CompleteJSON(ctx context.Context, systemPrompt, user string) (string, error)
+}
+
 func (c *OpenAIClient) CompleteJSON(ctx context.Context, systemPrompt, user string) (string, error) {
+	if systemPrompt != "" && !containsJSONWord(systemPrompt) {
+		systemPrompt += "\n\n(Hinweis: Antworte ausschließlich mit einem einzigen JSON-Objekt passend zum Schema.)"
+	}
+
 	payload := chatReq{
 		Model:       c.Model,
 		Temperature: 0,
-		ResponseFormat: map[string]any{"type": "json_object"},
 		Messages: []chatMessage{
 			{Role: "system", Content: systemPrompt},
 			{Role: "user", Content: user},
 		},
 	}
+
 	b, _ := json.Marshal(payload)
 	req, _ := http.NewRequestWithContext(ctx, "POST", c.BaseURL+"/chat/completions", bytes.NewReader(b))
 	req.Header.Set("Authorization", "Bearer "+c.APIKey)
@@ -92,4 +102,16 @@ func (c *OpenAIClient) CompleteJSON(ctx context.Context, systemPrompt, user stri
 		return "", errors.New("no choices")
 	}
 	return out.Choices[0].Message.Content, nil
+}
+
+func containsJSONWord(s string) bool {
+	for i := 0; i+3 < len(s); i++ {
+		if (s[i] == 'J' || s[i] == 'j') &&
+			(s[i+1] == 'S' || s[i+1] == 's') &&
+			(s[i+2] == 'O' || s[i+2] == 'o') &&
+			(s[i+3] == 'N' || s[i+3] == 'n') {
+			return true
+		}
+	}
+	return false
 }

@@ -1,0 +1,219 @@
+[
+  {
+    "query": "Familienfreundliches Hotel mit Frühstück und WLAN unter 120€ in Berlin vom 12.–14.10.2025, 2 Erwachsene, 1 Kind.",
+    "response": {
+      "openai": {
+        "location": "Berlin",
+        "dates": {
+          "checkin": "2025-10-12",
+          "checkout": "2025-10-14"
+        },
+        "guests": {
+          "adults": 2,
+          "children": 1
+        },
+        "price_max_eur": 120,
+        "stars_min": 0,
+        "rating_min": 0,
+        "family_friendly": true,
+        "ui_filters": {
+          "meals": [
+            "breakfast"
+          ],
+          "ratings": [],
+          "hotelTypes": [],
+          "hotelfacilities": [
+            "free_hotel_wifi"
+          ],
+          "poolbeach": [],
+          "distanceBeach": [],
+          "travelGroup": [],
+          "stars": [],
+          "wellness": [],
+          "reference_distance_max": [],
+          "flex": [],
+          "children": [],
+          "parking": [],
+          "freetime": [],
+          "certifications": [],
+          "hotelthemes": [],
+          "hotelBrand": [],
+          "hotelinformation": []
+        },
+        "unsupported_criteria": []
+      }
+    },
+    "latency_ms": 2303,
+    "time": "2025-08-22T11:47:30.597379+02:00"
+  },
+  {
+    "query": "Münsrter 4 star with pool",
+    "response": {
+      "openai": {
+        "location": "Münster",
+        "dates": {
+          "checkin": "",
+          "checkout": ""
+        },
+        "guests": {
+          "adults": 0,
+          "children": 0
+        },
+        "price_max_eur": 0,
+        "stars_min": 4,
+        "rating_min": 0,
+        "family_friendly": false,
+        "ui_filters": {
+          "meals": [],
+          "ratings": [],
+          "hotelTypes": [],
+          "hotelfacilities": [
+            "pool"
+          ],
+          "poolbeach": [],
+          "distanceBeach": [],
+          "travelGroup": [],
+          "stars": [
+            "4"
+          ],
+          "wellness": [],
+          "reference_distance_max": [],
+          "flex": [],
+          "children": [],
+          "parking": [],
+          "freetime": [],
+          "certifications": [],
+          "hotelthemes": [],
+          "hotelBrand": [],
+          "hotelinformation": []
+        },
+        "unsupported_criteria": []
+      },
+      "claude": {
+        "location": "Münster",
+        "dates": {
+          "checkin": "",
+          "checkout": ""
+        },
+        "guests": {
+          "adults": 0,
+          "children": 0
+        },
+        "price_max_eur": 0,
+        "stars_min": 4,
+        "rating_min": 0,
+        "family_friendly": false,
+        "ui_filters": {
+          "meals": [],
+          "ratings": [],
+          "hotelTypes": [],
+          "hotelfacilities": [],
+          "poolbeach": [
+            "pool"
+          ],
+          "distanceBeach": [],
+          "travelGroup": [],
+          "stars": [
+            "4"
+          ],
+          "wellness": [],
+          "reference_distance_max": [],
+          "flex": [],
+          "children": [],
+          "parking": [],
+          "freetime": [],
+          "certifications": [],
+          "hotelthemes": [],
+          "hotelBrand": [],
+          "hotelinformation": []
+        },
+        "unsupported_criteria": []
+      }
+    },
+    "latency_ms": 6386,
+    "time": "2025-08-22T11:48:03.539468+02:00"
+  },
+  {
+    "query": "Lahore with free wifi",
+    "response": {
+      "openai": {
+        "location": "Lahore",
+        "dates": {
+          "checkin": "",
+          "checkout": ""
+        },
+        "guests": {
+          "adults": 0,
+          "children": 0
+        },
+        "price_max_eur": 0,
+        "stars_min": 0,
+        "rating_min": 0,
+        "family_friendly": false,
+        "ui_filters": {
+          "meals": [],
+          "ratings": [],
+          "hotelTypes": [],
+          "hotelfacilities": [
+            "free_hotel_wifi"
+          ],
+          "poolbeach": [],
+          "distanceBeach": [],
+          "travelGroup": [],
+          "stars": [],
+          "wellness": [],
+          "reference_distance_max": [],
+          "flex": [],
+          "children": [],
+          "parking": [],
+          "freetime": [],
+          "certifications": [],
+          "hotelthemes": [],
+          "hotelBrand": [],
+          "hotelinformation": []
+        },
+        "unsupported_criteria": []
+      },
+      "claude": {
+        "location": "Lahore",
+        "dates": {
+          "checkin": "",
+          "checkout": ""
+        },
+        "guests": {
+          "adults": 0,
+          "children": 0
+        },
+        "price_max_eur": 0,
+        "stars_min": 0,
+        "rating_min": 0,
+        "family_friendly": false,
+        "ui_filters": {
+          "meals": [],
+          "ratings": [],
+          "hotelTypes": [],
+          "hotelfacilities": [
+            "free_hotel_wifi"
+          ],
+          "poolbeach": [],
+          "distanceBeach": [],
+          "travelGroup": [],
+          "stars": [],
+          "wellness": [],
+          "reference_distance_max": [],
+          "flex": [],
+          "children": [],
+          "parking": [],
+          "freetime": [],
+          "certifications": [],
+          "hotelthemes": [],
+          "hotelBrand": [],
+          "hotelinformation": []
+        },
+        "unsupported_criteria": []
+      }
+    },
+    "latency_ms": 5781,
+    "time": "2025-08-22T11:48:48.191785+02:00"
+  }
+]
