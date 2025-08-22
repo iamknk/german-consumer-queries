@@ -1,0 +1,2 @@
+(Optional) Paste your longer thesis system prompt here to override the fallback in code.
+Keep the same schema + rules; avoid extra fields; price as EUR number; ambiguity -> unsupported_criteria.

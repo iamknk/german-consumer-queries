@@ -1,0 +1,54 @@
+# ---- Go ----
+/api/bin/
+/api/dist/
+/api/build/
+/api/*.exe
+/api/*.exe~
+/api/*.dll
+/api/*.so
+/api/*.dylib
+/api/*.test
+/api/*.out
+/api/coverage.out
+
+# Go workspace files
+/go.work
+/go.work.sum
+
+# ---- Node / React (web) ----
+/web/node_modules/
+/web/dist/
+/web/.vite/
+/web/.next/
+/web/.turbo/
+/web/.cache/
+/web/yarn.lock
+/web/package-lock.json
+
+# ---- Logs ----
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ---- Env / Secrets ----
+.env
+/api/.env
+/api/.env.local
+/web/.env
+/web/.env.local
+
+# ---- OS / Editor cruft ----
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*.bak
+*~
+.idea/
+.vscode/
+*.iml
+
+# ---- Misc ----
+/tmp
+/out

@@ -1,0 +1,49 @@
+[
+  {
+    "query": "Familienfreundliches Hotel mit Frühstück und WLAN unter 120€ in Berlin vom 12.–14.10.2025, 2 Erwachsene, 1 Kind, mind. 4 Sterne, Bewertung 8+.",
+    "output": {
+      "location": "Berlin",
+      "dates": {
+        "checkin": "2025-10-12",
+        "checkout": "2025-10-14"
+      },
+      "guests": {
+        "adults": 2,
+        "children": 1
+      },
+      "price_max_eur": 120,
+      "stars_min": 4,
+      "rating_min": 8,
+      "family_friendly": true,
+      "ui_filters": {
+        "meals": [
+          "breakfast"
+        ],
+        "ratings": [
+          "8"
+        ],
+        "hotelTypes": [],
+        "hotelfacilities": [
+          "free_hotel_wifi"
+        ],
+        "poolbeach": [],
+        "distanceBeach": [],
+        "travelGroup": [],
+        "stars": [
+          "4"
+        ],
+        "wellness": [],
+        "reference_distance_max": [],
+        "flex": [],
+        "children": [],
+        "parking": [],
+        "freetime": [],
+        "certifications": [],
+        "hotelthemes": [],
+        "hotelBrand": [],
+        "hotelinformation": []
+      },
+      "unsupported_criteria": []
+    }
+  }
+]
